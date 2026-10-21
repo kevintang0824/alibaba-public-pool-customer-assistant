@@ -1,0 +1,5 @@
+uiautomation>=2.0.20
+pywinauto>=0.6.8
+opencv-python>=4.9.0.80
+paddleocr>=2.7.3
+pillow>=10.0.0

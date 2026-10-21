@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "阿里国际站公海客户开发助手",
+  "description": "在阿里国际站公海客户可见页面中扫描、去重，并辅助打开旺旺、填写自定义介绍语和发送素材。",
+  "version": "1.2.0",
+  "permissions": ["storage", "unlimitedStorage", "activeTab"],
+  "host_permissions": [
+    "https://alicrm.alibaba.com/*",
+    "https://i.alibaba.com/*",
+    "https://*.alibaba.com/*"
+  ],
+  "action": {
+    "default_title": "公海客户开发助手",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://onetalk.alibaba.com/*"
+      ],
+      "js": ["chat_bridge.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://alicrm.alibaba.com/*",
+        "https://i.alibaba.com/*",
+        "https://*.alibaba.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

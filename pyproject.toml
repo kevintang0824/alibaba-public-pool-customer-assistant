@@ -1,0 +1,15 @@
+[project]
+name = "alibaba-customer-dev-assistant"
+version = "0.1.0"
+description = "Windows local desktop automation assistant for Alibaba.com public-pool customer development."
+requires-python = ">=3.11"
+dependencies = [
+  "uiautomation>=2.0.20",
+  "pywinauto>=0.6.8",
+  "opencv-python>=4.9.0.80",
+  "paddleocr>=2.7.3",
+  "pillow>=10.0.0",
+]
+
+[tool.ruff]
+line-length = 110

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+data/*.db
+data/*.db-shm
+data/*.db-wal
+logs/
+screenshots/
+release/
+*.zip
+.venv/
+.pytest_cache/
